@@ -1,0 +1,19 @@
+package com.concepts.arrays;
+
+public class ArraysConcepts {
+/*
+ * From ORACLE Documentation
+ * 		>> Array is a container object which holds fixed number of elements(we will set the length when we declare it) of same type
+ * 		>> declaration of an array
+ * 			int[] anArray;
+ * 			You can also keep brackets after array's name which is not recommended 	ex: int anArray[]; 
+ * 		>> Allocating memory to an array
+ * 			anArray = new int[];
+ * 
+ */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

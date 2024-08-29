@@ -1,0 +1,106 @@
+package com.concepts.arrays;
+
+public class ArraysConcepts {
+/*
+ * From ORACLE Documentation
+ * 		>> Array is a container object which holds fixed number of elements(we will set the length when we declare it) of same type
+ * 		>> declaration of an array
+ * 			int[] anArray;
+ * 			You can also keep brackets after array's name which is not recommended 	ex: int anArray[]; 
+ * 		>> Allocating memory to an array
+ * 			anArray = new int[];
+ * 
+ * 		>> Shortcut to initialise an array
+ * 			int[] anArray = {1,2,3,4,5,6,7};
+ * 
+ * 		>> We can have multidimentional array
+ * 			int[][] anArray = int[rows][columns]
+ * 
+ * 		>> Arrays have length property to find it's size
+ * 			anArray.length;
+ * 		
+ * 		>> System class has arraycopy method that can effectively copy one array into another
+ * 			System.arraycopy(array1, int copyFromSourceStartPos, array2, int copyIntoDestinationStartingPos,int number_of_elements)
+ * 			Another way: String[] array2 = java.util.Arrays.copyOfRange(array1, int startingPoToCopy, int EndingPosToCopy)
+ * 
+ * 		>> Searching an Array for a specific value
+ * 				For linear search we can use for loop
+ * 				For binary search in case of sorted array we have Arrays.binarySearch() method
+ * 					Arrays.binarySearch(array, int targetValue)
+ * 
+ * 		>> Creating streams that uses array as source
+ * 			java.util.Arrays.stream(copyTo).map(coffee -> coffee + " ").forEach(System.out::print);  
+ * 
+ * 		>> Converting an array to string we have toString() method in arrays 
+ * 
+ * 		>>> fill method to fill all the elements in an array with same value 
+ */
+	
+	
+/*
+ * 	java.util.Arrays.stream(copyTo).map(coffee -> coffee + " ").forEach(System.out::print);  
+ *	 Multidimensional arrays are arrays of arrays with each element of the array holding the reference of other arrays.
+ *
+ *Shollow copy:-
+ *		Ex:
+ *		class A{
+ *		int var;
+ *		}
+ *			A obj1 = new A();
+ *				obj1.var=4;
+ *			A obj2 = obj1
+ *
+ *Deep copy:
+ *	We will have 2 objects
+ *		A obj1 = new A();
+ *			obj1.val1=4;
+ *		A obj2 = new A();
+ *			obj2.var = obj1.var;
+ *
+ *Cloning:
+ *	In cloning we create a new object and have same values as that of cloned object and intialised variables
+ *		A obj1 = new A();
+ *			obj1.val1=4;
+ *		A obj2 = obj1.clone();
+ *	
+ *
+ *When you clone a single-dimensional array, such as Object[], a shallow copy is performed. This means that the new array contains references 
+ *	to the original array’s elements rather than copies of the objects themselves. A deep copy occurs only with arrays containing primitive data types, 
+ *	 where the actual values are copied.
+ *	 int intArray[] = { 1, 2, 3 };
+	 int cloneArray[] = intArray.clone();
+  	// will print false as deep copy is created
+ 	System.out.println(intArray == cloneArray);
+ *
+ *
+ *
+ *	A clone of a multi-dimensional array (like Object[][]) is a “shallow copy,” however, which is to say that it creates 
+ *	only a single new array with each element array a reference to an original element array, but subarrays are shared. 
+ *		        int intArray[][] = { { 1, 2, 3 }, { 4, 5 } };
+
+        int cloneArray[][] = intArray.clone();
+
+        // will print false
+        System.out.println(intArray == cloneArray);
+
+        // will print true as shallow copy is created
+        // i.e. sub-arrays are shared
+        System.out.println(intArray[0] == cloneArray[0]);
+        System.out.println(intArray[1] == cloneArray[1]);
+        
+        
+        
+ */
+	public static void main(String[] args) {
+	      int intArray[] = { 1, 2, 3 };
+
+	        int cloneArray[] = intArray.clone();
+
+	        // will print false as shallow copy is created
+	        System.out.println(intArray == cloneArray);
+
+	        for (int i = 0; i < cloneArray.length; i++) {
+	            System.out.print(cloneArray[i] + " ");
+	}
+
+}}

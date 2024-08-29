@@ -1,0 +1,31 @@
+package com.concepts.arrays;
+
+public class ArraysConcepts {
+/*
+ * From ORACLE Documentation
+ * 		>> Array is a container object which holds fixed number of elements(we will set the length when we declare it) of same type
+ * 		>> declaration of an array
+ * 			int[] anArray;
+ * 			You can also keep brackets after array's name which is not recommended 	ex: int anArray[]; 
+ * 		>> Allocating memory to an array
+ * 			anArray = new int[];
+ * 
+ * 		>> Shortcut to initialise an array
+ * 			int[] anArray = {1,2,3,4,5,6,7};
+ * 
+ * 		>> We can have multidimentional array
+ * 			int[][] anArray = int[rows][columns]
+ * 
+ * 		>> Arrays have length property to find it's size
+ * 			anArray.length;
+ * 		
+ * 		>> System class has arraycopy method that can effectively copy one array into another
+ * 			Sstem.arraycopy(array1, int sourceStartPos, array2, int desStartingPos,int number_of_elements)
+ * 				
+ */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

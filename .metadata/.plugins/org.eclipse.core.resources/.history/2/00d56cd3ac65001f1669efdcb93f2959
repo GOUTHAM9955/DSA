@@ -1,0 +1,43 @@
+package com.concepts.arrays;
+
+public class ArraysConcepts {
+/*
+ * From ORACLE Documentation
+ * 		>> Array is a container object which holds fixed number of elements(we will set the length when we declare it) of same type
+ * 		>> declaration of an array
+ * 			int[] anArray;
+ * 			You can also keep brackets after array's name which is not recommended 	ex: int anArray[]; 
+ * 		>> Allocating memory to an array
+ * 			anArray = new int[];
+ * 
+ * 		>> Shortcut to initialise an array
+ * 			int[] anArray = {1,2,3,4,5,6,7};
+ * 
+ * 		>> We can have multidimentional array
+ * 			int[][] anArray = int[rows][columns]
+ * 
+ * 		>> Arrays have length property to find it's size
+ * 			anArray.length;
+ * 		
+ * 		>> System class has arraycopy method that can effectively copy one array into another
+ * 			System.arraycopy(array1, int copyFromSourceStartPos, array2, int copyIntoDestinationStartingPos,int number_of_elements)
+ * 			Another way: String[] array2 = java.util.Arrays.copyOfRange(array1, int startingPoToCopy, int EndingPosToCopy)
+ * 
+ * 		>> Searching an Array for a specific value
+ * 				For linear search we can use for loop
+ * 				For binary search in case of sorted array we have Arrays.binarySearch() method
+ * 					Arrays.binarySearch(array, int targetValue)
+ * 
+ * 		>> Creating streams that uses array as source
+ * 			java.util.Arrays.stream(copyTo).map(coffee -> coffee + " ").forEach(System.out::print);  
+ * 
+ * 		>> Converting an array to string we have toString() method in arrays 
+ * 
+ * 		>>> fill method to fill all the elements in an array with same value
+ */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

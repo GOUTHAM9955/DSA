@@ -1,0 +1,14 @@
+package com.concepts.arrays;
+
+public class ArraysConcepts {
+/*
+ * From ORACLE Documentation
+ * 		>> Array is a container object which holds fixed number of elements of same type
+ * 
+ */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
