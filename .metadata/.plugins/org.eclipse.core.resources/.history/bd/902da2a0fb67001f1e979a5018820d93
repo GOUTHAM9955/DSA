@@ -1,0 +1,20 @@
+package com.practise.arrays;
+
+import java.util.Arrays;
+
+public class Practise {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int arr1[] = {0,1,2,3,4,9,9};
+		int arr2[] = {1,2,3,4,5,6};
+		int arr3[] = {-1,2,3,4,5};
+		
+		
+		int minArr[] = arr1[0]>arr2[0] ? (arr1[0]>arr3[0]? arr1:arr2[0]>arr3[0]? arr2:arr3): arr2[0]>arr3[0] ? arr2: arr3;
+		int maxArr[] = arr1[arr1.length-1]<arr2[arr2.length-1] ? (arr1[arr1.length-1]<arr3[arr3.length-1]? arr1:arr2[arr2.length-1]<arr3[arr3.length-1]? arr2:arr3): arr2[arr2.length-1]<arr3[arr3.length-1] ? arr2: arr3;
+		
+		System.out.println("max_arr ="+ Arrays.toString(maxArr)+"min_arr = "+Arrays.toString(minArr));
+	}
+
+}

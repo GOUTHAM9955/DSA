@@ -1,0 +1,12 @@
+package com.concepts.arrays;
+
+// BINARY SEARCH
+class BinarySearchIterative{
+	
+}
+
+public class Algorithms {
+	public static void main(String[] args) {
+		
+	}
+}

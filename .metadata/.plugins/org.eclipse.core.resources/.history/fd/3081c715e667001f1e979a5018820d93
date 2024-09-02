@@ -1,0 +1,12 @@
+package com.concepts.arrays;
+
+//Searching sorted array using binary search using iterative method
+class algo1{
+	
+}
+
+public class SerchingAlgorithm {
+	public static void main(String[] args) {
+		
+	}
+}

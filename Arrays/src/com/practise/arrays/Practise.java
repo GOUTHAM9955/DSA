@@ -1,0 +1,27 @@
+package com.practise.arrays;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class Practise {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<Integer> arr1 = Arrays.asList(0,1,2,3,4,9);
+		List<Integer> arr2 = Arrays.asList(1,2,3,4,5,6);
+		List<Integer> arr3 = Arrays.asList(-1,2,3,4,5);
+
+		List<Integer> arr4 = new ArrayList<Integer>();
+		
+		int minVal = arr1.get(0)>arr2.get(0) ? (arr1.get(0)>arr3.get(0)? arr1.get(0):arr2.get(0)>arr3.get(0)? arr2.get(0):arr3.get(0)): arr2.get(0)>arr3.get(0) ? arr2.get(0): arr3.get(0);
+		int maxVal = arr1.get(arr1.size()-1)<arr2.get(arr2.size()-1) ? (arr1.get(arr1.size()-1)<arr3.get(arr3.size()-1)? arr1.get(arr1.size()-1):arr2.get(arr2.size()-1)<arr3.get(arr3.size()-1)? arr2.get(arr2.size()-1):arr3.get(arr3.size()-1)): arr2.get(arr2.size()-1)<arr3.get(arr3.size()-1) ? arr2.get(arr2.size()-1): arr3.get(arr3.size()-1);
+		
+		System.out.println("MinVal: "+minVal+"Max_Val :"+maxVal);
+		
+	
+		
+		
+	}
+
+}

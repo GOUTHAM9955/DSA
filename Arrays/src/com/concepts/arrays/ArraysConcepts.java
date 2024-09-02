@@ -33,7 +33,9 @@ public class ArraysConcepts {
  * 
  * 		>> Converting an array to string we have toString() method in arrays 
  * 
- * 		>>> fill method to fill all the elements in an array with same value 
+ * 		>> fill method to fill all the elements in an array with same value 
+ * 	
+ * 		>> For sorting we can use static sort method from Arrays or sort method form collections
  */
 	
 	
@@ -117,7 +119,23 @@ ways to find the duplicate elements in an array
 	Using HashSet
 	Using HashMap
 
+In Java, a Set is an array,
+
+
+Java Arrays class provides two methods isExists() and contains() to check an array has elements or not. 
+	Both the methods return true if an array has elements else returns false.
 	 */
+	
+/*
+ * Time complexity:
+ * 		Fetching a value : O(1)
+ * 		Updating : O(1)
+ * 		Serching : O(n)
+ * 		Inserting : O(n)
+ * 		Deleting : O(n)
+ * 			
+ */
+
 	public static void main(String[] args) {
 	      int intArray[] = { 1, 2, 3 };
 

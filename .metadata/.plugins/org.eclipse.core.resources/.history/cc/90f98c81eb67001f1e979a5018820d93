@@ -1,0 +1,87 @@
+package com.concepts.arrays;
+
+// BINARY SEARCH
+
+/*
+ * Binary search is a search algorithm used to find the position of a target value within a SORTED ARRAY.
+ * 		Implementation behind binary search:
+ * 			>> Divide the search space into two halves by finding the middle index “mid”. 
+			>> Compare the middle element of the search space with the key. 
+			>> If the key is found at middle element, the process is terminated.
+			>> If the key is not found at middle element, choose which half will be used as the next search space.
+				>> If the key is smaller than the middle element, then the left side is used for next search.
+				>> If the key is larger than the middle element, then the right side is used for next search.
+			>> This process is continued until the key is found or the total search space is exhausted.
+ * 		
+ */
+
+// ITERATIVE vs RECURSIVE
+/*
+ * An iterative algorithm uses loops (such as for, while, or do-while) to repeat a set of instructions until a certain condition is met.
+ * 		ADVANTAGE
+ * 		>>	Generally more memory-efficient as they avoid the overhead of multiple function calls.
+ * 		>>	Easier to optimize and often faster for simple tasks.
+ *		Disadvantage
+ * 		>>Some problems are more naturally expressed recursively, making iterative solutions harder to conceptualize and implement.
+ *
+ * A recursive algorithm solves a problem by breaking it down into smaller instances of the same problem, typically using a base case to stop the recursion.
+		Advantage 
+		>> More natural and concise for problems that can be broken down into similar subproblems, like tree structures, divide-and-conquer algorithms, and dynamic programming.
+		>> Can lead to more readable and maintainable code for certain problems.
+ * 		Disadvantages
+ * 		>> Can be less efficient due to the overhead of multiple function calls.
+	    >> Risk of stack overflow if the recursion depth is too large (e.g., with large inputs or deep recursive calls).
+ */
+class BinarySearchIterative{
+	// Method to return index of x if it is present
+	int binarySearch(int arr[], int x) {
+		
+		int low =0, high=arr.length-1;
+		while(low<=high) {
+			// Finding mid value
+			int mid = low + (high - low) / 2;
+			// Check if mid== value
+			 if(arr[mid] == x) 		
+				 return mid;
+			 // If mid less than the value
+			 if (arr[mid]< x)
+				 low = mid +1;
+			 // If mid greater than the value
+			 else
+				 high = mid - 1;
+		}
+		// If the value isn't present
+		return -1;
+	}
+}
+
+class BinarySearchRecusive{
+	
+	int binarySearch(int[] arr,int low, int high, int x) {
+		if(low<=high) {
+			int mid = low+(high-low)/2;
+			
+			if(arr[mid] == x)
+				return mid;
+			if(arr[mid]>x) 
+				return binarySearch(arr, low, mid-11, x);
+			else
+				return binarySearch(arr, mid+1, high, x);
+		}
+		return -1;
+	}
+}
+
+public class BinarySearch {
+	public static void main(String[] args) {
+		int[] arr = {1,2,3,4,5,6,7};
+		BinarySearchIterative obj1 = new BinarySearchIterative();
+		BinarySearchRecusive obj2 = new BinarySearchRecusive();
+		
+		int val1 = obj1.binarySearch(arr, 6);
+		int val2 = obj2.binarySearch(arr, 0, arr.length, 6);
+		
+		System.out.println("index is "+ val1 + "/ " + val2);
+		
+	}
+}
